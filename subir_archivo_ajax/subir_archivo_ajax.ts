@@ -2,7 +2,7 @@ prepareFoto(event){
 	this.foto = event.target.files[0];
 }
 
-save(){
+guardar(){
 	if( !this.foto ){
 		alert('Debes seleccionar una foto');
 		return;
