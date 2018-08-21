@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FILE READER</title>
+</head>
+<body>
+	
+
+	<input type="file" id="fileInput">
+	<button>Guardar</button>
+	
+	<pre contenteditable="true"></pre>
+
+
+	
+	<script>
+		
+		window.URL = window.URL || window.webkitURL;
+
+		// PROCESO PARA LEER ARCHIVO
+		let archivo;
+		let archivoResult;
+
+		let input = document.querySelector('#fileInput');
+		let pre = document.querySelector('pre');
+
+		input.onchange = ()=>{
+			archivo = input.files[0];
+			processResult();
+		};
+
+		let processResult = ()=>{
+			let reader = new FileReader();
+			reader.onload = (result)=>{
+				archivoResult = result.target.result;
+				renderResult();
+			}
+			reader.readAsText(archivo);
+		};
+
+		let renderResult = ()=>{
+			pre.innerText = archivoResult;
+		}
+
+
+		//PROCESO PARA GUARDAR (DESCARGAR) EL ARCHIVO;
+		let botton = document.querySelector('button');
+
+		botton.onclick = ()=>{
+
+
+			if(!pre.innerText) return;
+
+			let content = new Blob([pre.innerText], { type: archivo.type });
+			content = window.URL.createObjectURL(content);
+			console.log(content);
+
+			let descarga = document.createElement('a');
+			descarga.download = archivo.name;
+			descarga.target = '_blank';
+			descarga.href = content;
+
+			document.body.appendChild(descarga);
+
+			descarga.click();
+
+			setTimeout(()=>{
+				document.body.removeChild(descarga);
+			}, 1);
+
+		};
+
+	</script>
+</body>
+</html>

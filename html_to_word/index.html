@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document To PDF</title>
+	<script src="./bower_components/Jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/FileSaver.js/src/FileSaver.js"></script>
+	<script src="./bower_components/jQuery-Word-Export/jquery.wordexport.js"></script>
+	<script src="./bower_components/canvg.bundle.min.js"></script>
+</head>
+<body>
+
+	
+	<div id="content">
+		<svg version="1.1" style="position: relative; width: 665px; height: 300px; top: 0.390625px; left: -0.109375px;"><desc>JavaScript chart by amCharts 3.21.5</desc><g><path cs="100,100" d="M0.5,0.5 L664.5,0.5 L664.5,299.5 L0.5,299.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0"></path><path cs="100,100" d="M0.5,0.5 L541.5,0.5 L541.5,244.5 L0.5,244.5 L0.5,0.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" transform="translate(103,20)"></path></g><g><g transform="translate(103,20)"><g><path cs="100,100" d="M0.5,20.5 L6.5,20.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,20.5 L0.5,20.5 L541.5,20.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,61.5 L6.5,61.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,61.5 L0.5,61.5 L541.5,61.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,102.5 L6.5,102.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,102.5 L0.5,102.5 L541.5,102.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,142.5 L6.5,142.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,142.5 L0.5,142.5 L541.5,142.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,183.5 L6.5,183.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,183.5 L0.5,183.5 L541.5,183.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g><g><path cs="100,100" d="M0.5,224.5 L6.5,224.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(-6,0)"></path><path cs="100,100" d="M0.5,224.5 L0.5,224.5 L541.5,224.5" fill="none" stroke-width="1" stroke-opacity="0.1" stroke="#000000"></path></g></g><g transform="translate(103,20)" visibility="visible"><g><path cs="100,100" d="M0.5,0.5 L0.5,5.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(0,244)"></path><path cs="100,100" d="M0.5,244.5 L0.5,244.5 L0.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#000000"></path></g><g><path cs="100,100" d="M77.5,0.5 L77.5,5.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(0,244)"></path><path cs="100,100" d="M77.5,244.5 L77.5,244.5 L77.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#000000"></path></g><g><path cs="100,100" d="M155.5,0.5 L155.5,5.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(0,244)"></path><path cs="100,100" d="M155.5,244.5 L155.5,244.5 L155.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#000000"></path></g><g><path cs="100,100" d="M232.5,0.5 L232.5,5.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(0,244)"></path><path cs="100,100" d="M232.5,244.5 L232.5,244.5 L232.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#000000"></path></g><g><path cs="100,100" d="M309.5,0.5 L309.5,5.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(0,244)"></path><path cs="100,100" d="M309.5,244.5 L309.5,244.5 L309.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#000000"></path></g><g><path cs="100,100" d="M386.5,0.5 L386.5,5.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(0,244)"></path><path cs="100,100" d="M386.5,244.5 L386.5,244.5 L386.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#000000"></path></g><g><path cs="100,100" d="M464.5,0.5 L464.5,5.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(0,244)"></path><path cs="100,100" d="M464.5,244.5 L464.5,244.5 L464.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#000000"></path></g><g><path cs="100,100" d="M541.5,0.5 L541.5,5.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(0,244)"></path><path cs="100,100" d="M541.5,244.5 L541.5,244.5 L541.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.15" stroke="#000000"></path></g></g></g><g></g><g></g><g></g><g></g><g><g transform="translate(103,20)"><g><g transform="translate(0,10)" aria-label=" Menor de 19 17"><path cs="100,100" d="M0.5,0.5 L0.5,20.5 L26.5,20.5 L26.5,0.5 L0.5,0.5 Z" fill="#971224" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g><g transform="translate(0,51)" aria-label=" Entre 20 y 29 316"><path cs="100,100" d="M0.5,0.5 L0.5,20.5 L488.5,20.5 L488.5,0.5 L0.5,0.5 Z" fill="#DCD5DE" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g><g transform="translate(0,92)" aria-label=" Entre 30 y 39 276"><path cs="100,100" d="M0.5,0.5 L0.5,20.5 L427.5,20.5 L427.5,0.5 L0.5,0.5 Z" fill="#69DF57" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g><g transform="translate(0,132)" aria-label=" Entre 40 y 49 153"><path cs="100,100" d="M0.5,0.5 L0.5,20.5 L236.5,20.5 L236.5,0.5 L0.5,0.5 Z" fill="#EE23B8" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g><g transform="translate(0,173)" aria-label=" Entre 50 y 59 84"><path cs="100,100" d="M0.5,0.5 L0.5,20.5 L130.5,20.5 L130.5,0.5 L0.5,0.5 Z" fill="#0BAF63" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g><g transform="translate(0,214)" aria-label=" Mayor de 60 19"><path cs="100,100" d="M0.5,0.5 L0.5,20.5 L29.5,20.5 L29.5,0.5 L0.5,0.5 Z" fill="#BD0754" stroke="#67b7dc" fill-opacity="1" stroke-width="1" stroke-opacity="1"></path></g></g></g></g><g></g><g><path cs="100,100" d="M0.5,244.5 L0.5,0.5 L0.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(103,20)"></path><g><path cs="100,100" d="M0.5,0.5 L0.5,244.5" fill="none" stroke-width="1" stroke-opacity="0.3" stroke="#000000" transform="translate(103,20)"></path></g><g><path cs="100,100" d="M0.5,0.5 L541.5,0.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000" transform="translate(103,264)" visibility="visible"></path></g></g><g></g><g></g><g><g transform="translate(103,20)"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" style="pointer-events: none;" transform="translate(29,20)"><tspan y="6" x="0">17</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" style="pointer-events: none;" transform="translate(491,61)"><tspan y="6" x="0">316</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" style="pointer-events: none;" transform="translate(430,102)"><tspan y="6" x="0">276</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" style="pointer-events: none;" transform="translate(239,142)"><tspan y="6" x="0">153</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" style="pointer-events: none;" transform="translate(133,183)"><tspan y="6" x="0">84</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="start" style="pointer-events: none;" transform="translate(32,224)"><tspan y="6" x="0">19</tspan></text></g></g><g><g></g></g><g><g transform="translate(103,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,19)"><tspan y="6" x="0">Menor de 19</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,60)"><tspan y="6" x="0">Entre 20 y 29</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,101)"><tspan y="6" x="0">Entre 30 y 39</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,141)"><tspan y="6" x="0">Entre 40 y 49</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,182)"><tspan y="6" x="0">Entre 50 y 59</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="end" transform="translate(-12,223)"><tspan y="6" x="0">Mayor de 60</tspan></text></g><g transform="translate(103,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(0,261.5)"><tspan y="6" x="0">0</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(77,261.5)"><tspan y="6" x="0">50</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(155,261.5)"><tspan y="6" x="0">100</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(232,261.5)"><tspan y="6" x="0">150</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(309,261.5)"><tspan y="6" x="0">200</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(386,261.5)"><tspan y="6" x="0">250</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(464,261.5)"><tspan y="6" x="0">300</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(541,261.5)"><tspan y="6" x="0">350</tspan></text></g></g><g></g><g transform="translate(103,20)"></g><g></g><g></g></svg>
+	</div>
+	<button id="canvertir">Convertir</button>
+	<button id="btn_descargar">Descargar</button>
+	<br>
+	<br>
+
+	<script>
+		
+		let canvas;
+		let imagen;
+
+		let button	= document.querySelector('#canvertir');
+		button.onclick = ()=>{
+			convertir();
+		}
+
+		let download = document.querySelector('#btn_descargar');
+		download.onclick = ()=>{
+			descargar();
+		}
+
+		let convertir = ()=>{
+			crearCarvas();
+			pintarCanvas();
+			crearImagen();
+			pintarImagen();
+		}
+
+
+		let crearCarvas = ()=>{
+			if(canvas) canvas.remove();
+			canvas = document.createElement('canvas');
+			canvas.width = 665;
+			canvas.height = 300;
+			canvas.style.border = '1px solid';
+			document.body.appendChild( canvas );
+		}
+
+		let pintarCanvas = ()=>{
+			canvg( canvas, '<svg width="665" height="300" xmlns="http://www.w3.org/2000/svg">' + document.querySelector('svg').innerHTML + '</svg>' );
+		}
+
+		let crearImagen = ()=>{
+			if(imagen) imagen.remove();
+			imagen = document.createElement('img');
+			imagen.width = 665;
+			imagen.height = 300;
+			canvas.style.border = '1px solid';
+			document.body.appendChild( imagen );
+		}
+
+		let pintarImagen = ()=>{
+			imagen.src = canvas.toDataURL();
+			// imagen.onload = descargar;
+		}
+
+		let descargar = ()=>{
+			// let preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Informe de Condiciones de Salud</title></head><body>";
+		 //    let postHtml = "</body></html>";
+		 //    let html = preHtml+document.querySelector('body').innerHTML+postHtml;
+
+		 //    let blob = new Blob(['\ufeff', html], {
+		 //        type: 'application/msword'
+		 //    });
+		    
+		 //    // Specify link url
+		 //    let url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
+		    
+		 //    // Specify file name
+		 //    let filename = 'ics_isismaweb.doc';
+		    
+		 //    // Create download link element
+		 //    let downloadLink = document.createElement("a");
+
+		 //    document.body.appendChild(downloadLink);
+
+		 //    if(navigator.msSaveOrOpenBlob ){
+		  //           navigator.msSaveOrOpenBlob(blob, filename);
+		  //       }else{
+		  //           // Create a link to the file
+		  //           downloadLink.href = url;
+		            
+		  //           // Setting the file name
+		  //           downloadLink.download = filename;
+		            
+		  //           //triggering the function
+		  //           downloadLink.click();
+		  //       }
+		        
+		  //       document.body.removeChild(downloadLink);
+	  		$('body').wordExport();
+		}
+	</script>
+</body>
+</html>
